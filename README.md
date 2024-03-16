@@ -12,3 +12,5 @@
 
 ## What I Learned ?
 - How to use Google Materials in HTML.
+- How to use Adobe Color Wheel.
+- transform property in css.
