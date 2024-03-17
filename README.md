@@ -1,5 +1,5 @@
 # Calculator
-- 👉[live](https://krishnasinghmahar.github.io/Calculator/)
+- 👉[live Demo](https://krishnasinghmahar.github.io/Calculator/)
   
 ## Introduction
 - The Final Project for the Foundations Course of The Odin Project.
