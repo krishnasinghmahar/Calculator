@@ -16,3 +16,4 @@
 - transform property in css.
 - how to apply active mode in css.
 - how to use regular expressions.
+- how to add audio files.
