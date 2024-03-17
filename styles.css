@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -17,6 +18,17 @@ body {
     background: linear-gradient(to right,
             #333399,
             #ff00cc);
+}
+
+.display {
+    display: flex;
+    justify-content: end;
+    padding-top: 40px;
+    padding-right: 10px;
+    font-size: 42px;
+    color: darkblue;
+    font-weight: 700;
+    text-shadow: 0 0 2px #ff00cc;
 }
 
 .container {
@@ -41,7 +53,7 @@ body {
     border: 2px #add8e6 ridge;
     background-color: rgba(127, 255, 212, 0.5);
 
-    .output {
+    .display {
         box-shadow: 0 0 50px rgba(6, 218, 233, 0.9);
         border: 2px lightblue ridge;
         transform: scale(1.02);
@@ -75,7 +87,7 @@ body {
     }
 
     .material-icons {
-        color: rgba(255, 0, 0, 1);
+        color: rgba(255, 0, 0, 0.5);
         border: 2px groove rgba(255, 0, 0, 0.5);
         background-color: 0 0 30px rgba(255, 0, 0);
         box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
@@ -93,9 +105,9 @@ body {
 
 
 /* before container hover */
-.output {
+.display {
     width: 290px;
-    height: 170px;
+    height: 150px;
     border-radius: 20px;
     background: linear-gradient(to right bottom,
             rgba(255, 255, 255, 0.04),
@@ -105,19 +117,19 @@ body {
     border: 1px lightsteelblue ridge;
 }
 
-.container>.output:hover {
+.container>.display:hover {
     transform: scale(1.04);
     border: 3px rgb(80, 147, 169) ridge;
     box-shadow: 0 0 50px rgb(6, 93, 233);
     background-color: rgba(0, 255, 255, 0.3);
 }
 
-button {
+button,
+input {
     width: 60px;
     height: 60px;
     border-radius: 100%;
     font-size: 32px;
-    background: white;
     background: linear-gradient(to right bottom,
             rgba(255, 255, 255, 0.4),
             rgba(255, 255, 255, 0.2));
@@ -156,8 +168,8 @@ button {
     color: rgba(255, 0, 0, 0.3);
     border: 1px groove rgba(255, 0, 0, 0.3);
     background-color: rgba(0, 255, 217, 0.3);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
 .equal {
@@ -171,7 +183,7 @@ button {
 
 button:hover:hover {
     transform: scale(1.2);
-    border: rgb(63, 147, 175) ridge;
+    border: rgb(0, 191, 255) ridge;
     box-shadow: 0 0 10px 5px rgb(0, 225, 255);
     background-color: aqua;
 
@@ -181,7 +193,7 @@ button:hover:hover {
 .operations:hover:hover {
     background-color: rgba(0, 255, 0, 0.505);
     box-shadow: 0 0 10px 5px rgba(10, 221, 10, 1);
-    border: 3px green ridge;
+    border: 3px rgb(0, 255, 0) ridge;
 }
 
 
@@ -202,4 +214,95 @@ button:hover:hover {
     border: 3px groove rgba(0, 255, 0);
     background: rgb(0, 255, 0);
     box-shadow: 0 0 10px 5px rgba(0, 255, 0);
+}
+
+
+/* active */
+button:hover:hover:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px 20px rgba(0, 157, 255);
+}
+
+.operations:hover:hover:active {
+    box-shadow: 0 0 20px 20px rgb(9, 185, 9);
+}
+
+.clear:hover:hover:active {
+    box-shadow: 0 0 20px 20px rgb(221, 10, 10);
+}
+
+.material-icons:hover:hover:active {
+    box-shadow: 0 0 20px 20px rgb(255, 0, 0);
+}
+
+.equal:hover:hover:active {
+    box-shadow: 0 0 20px 20px rgba(0, 255, 0);
+}
+
+/* pop-up messages */
+
+button:hover:hover::after {
+    position: absolute;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 20px rgba(6, 218, 233, 0.3);
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+.clear:hover:hover::after {
+    content: "Clear";
+}
+
+#power:hover:hover::after {
+    content: "Power";
+}
+
+#modulus:hover:hover::after {
+    content: "Modulus";
+}
+
+#divide:hover:hover::after {
+    content: "Divide";
+}
+
+#multiply:hover:hover::after {
+    content: "Multiply";
+}
+
+#minus:hover:hover::after {
+    content: "Minus";
+}
+
+#plus:hover:hover::after {
+    content: "Plus";
+}
+
+#equal:hover:hover::after {
+    content: "Equal";
+}
+
+.material-icons:hover:hover::after {
+    content: "BACKSPACE";
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

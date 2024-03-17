@@ -12,36 +12,36 @@
 
 <body>
     <div class="container">
-        <div class="output" id="output"></div>
+        <div class="display" id="display"></div>
         <div class="row">
-            <button class="clear" id="clear">C</button>
-            <button class="operations" id="power">^</button>
-            <button class="operations" id="modules">%</button>
-            <button class="operations" id="divide">&#247</button>
+            <button class="clear" id="clear" onclick="clearDisplay()">C</button>
+            <button class="operations" id="power" onclick="addToDisplay('^')">^</button>
+            <button class="operations" id="modulus" onclick="addToDisplay('%')">%</button>
+            <button class="operations" id="divide" onclick="addToDisplay('&#247')">&#247</button>
         </div>
         <div class="row">
-            <button id="seven">7</button>
-            <button id="eight ">8</button>
-            <button id="nine">9</button>
-            <button class="operations" id="multiply">x</button>
+            <button id="seven" onclick="addToDisplay(7)">7</button>
+            <button id="eight" onclick="addToDisplay(8)">8</button>
+            <button id="nine" onclick="addToDisplay(9)">9</button>
+            <button class="operations" id="multiply" onclick="addToDisplay('&#xd7;')">&#xd7;</button>
         </div>
         <div class="row">
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button class="operations" id="minus">&minus;</button>
+            <button id="four" onclick="addToDisplay(4)">4</button>
+            <button id="five" onclick="addToDisplay(5)">5</button>
+            <button id="six" onclick="addToDisplay(6)">6</button>
+            <button class="operations" id="minus" onclick="addToDisplay('&minus;')">&minus;</button>
         </div>
         <div class="row">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button class="operations" id="plus">+</button>
+            <button id="one" onclick="addToDisplay(1)">1</button>
+            <button id="two" onclick="addToDisplay(2)">2</button>
+            <button id="three" onclick="addToDisplay(3)">3</button>
+            <button class="operations" id="plus" onclick="addToDisplay('+')">+</button>
         </div>
         <div class="row">
-            <button id="point">.</button>
-            <button id="zero">0</button>
-            <button class="material-icons" id="backspace">backspace</button>
-            <button class="equal" id="equal">=</button>
+            <button id="point" onclick="addToDisplay('.')">.</button>
+            <button id="zero" onclick="addToDisplay(0)">0</button>
+            <button class="material-icons" id="backspace" onclick="backSpace()">backspace</button>
+            <button class="equal" id="equal" onclick="displayResult()">=</button>
         </div>
     </div>
 </body>

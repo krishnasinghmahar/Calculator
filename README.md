@@ -14,3 +14,5 @@
 - How to use Google Materials in HTML.
 - How to use Adobe Color Wheel.
 - transform property in css.
+- how to apply active mode in css.
+- how to use regular expressions.
