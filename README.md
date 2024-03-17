@@ -1,5 +1,6 @@
 # Calculator
-
+- 👉[live](https://krishnasinghmahar.github.io/Calculator/)
+  
 ## Introduction
 - The Final Project for the Foundations Course of The Odin Project.
 - The Calculator utilizes many of the technologies covered in the Foundations Course, including HTML, CSS, and JavaScript.
