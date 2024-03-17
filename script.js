@@ -46,8 +46,8 @@ function displayResult() {
     try {
         let newExp = expression.replace(/−/gi, '-').replace(/×/gi, '*').replace(/÷/gi, '/').replace(/\^/gi, '**');
         if (newExp.includes('/0')) {
-            display.textContent = 'Never Gonna Give You Up!';
-            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            display.textContent = 'Smooth move, Einstein!';
+            window.location.href = 'https://www.youtube.com/watch?v=_bMPMy0QLgM';
             return;
         }
         let result = eval(newExp);
