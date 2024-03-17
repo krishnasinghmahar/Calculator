@@ -47,7 +47,7 @@ function displayResult() {
         let newExp = expression.replace(/−/gi, '-').replace(/×/gi, '*').replace(/÷/gi, '/').replace(/\^/gi, '**');
         if (newExp.includes('/0')) {
             display.textContent = 'Smooth move, Einstein!';
-            window.location.href = 'https://www.youtube.com/watch?v=_bMPMy0QLgM';
+            window.location.href = 'https://www.youtube.com/watch?v=NKmGVE85GUU';
             return;
         }
         let result = eval(newExp);
