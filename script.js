@@ -6,6 +6,9 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((e) => {
     e.addEventListener('click', () => bopSound.play());
 })
+buttons.forEach((e) => {
+    e.addEventListener('keypress', () => bopSound.play());
+})
 
 
 
